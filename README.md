@@ -34,15 +34,19 @@ The Pediatrics Chemotherapy Dosing Calculator is a tool designed to assist healt
 
 
 2. Frontend:
+    ```
     npm install
     ng start
+    ```
 
 
 3. Backend:
+    ```
     run src\main\java\com\oncolator\app\UsersApplication.java
+    ```
 
 
-4. The server will be accessible at localhost:4200
+4. The server will be accessible at ``` localhost:4200 ```
 
 
 ## License
@@ -53,7 +57,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Screenshots
 
+![Screenshot 3](screenshots/ss3.jpg)
 ![Screenshot 1](screenshots/ss1.jpg)
 ![Screenshot 2](screenshots/ss2.jpg)
+
 
 
