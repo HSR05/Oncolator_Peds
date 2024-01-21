@@ -56,8 +56,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 ## Screenshots
-
+![Screenshot 2](screenshots/ss3.jpg)
 ![Screenshot 1](screenshots/ss1.jpg)
 ![Screenshot 2](screenshots/ss2.jpg)
+
 
 
