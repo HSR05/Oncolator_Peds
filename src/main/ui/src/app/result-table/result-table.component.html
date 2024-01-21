@@ -1,0 +1,37 @@
+<ng-container *ngIf="dosageData.phaseInfo.risk !== 'NA'">
+  <h6>Risk: {{dosageData.phaseInfo.risk}}</h6>
+</ng-container>
+<div class="table-container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="position: sticky; left: 0; background-color: white; font-weight: bold;">DRUG</th>
+        <!-- <th *ngFor=" let idx of dosageData[0].dosage; let i=index">DAY {{i+1}}</th> -->
+        <th *ngFor="let idx of dosageData.result[0].dosage; let i = index" style="text-align:center">DAY<br>{{i+1}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let idx of dosageData[0].dosage; let i = index">
+        <td>{{i+1}}</td>
+        <td *ngFor="let dosage of dosageData">
+          {{dosage.dosage[i]}}mg
+        </td>
+      </tr> -->
+      <tr *ngFor="let drug of dosageData.result">
+        <td
+          style="position: sticky; left: 0; background-color: white; font-weight: bold; text-align: left; max-width: calc(50% - 1px); white-space: nowrap;">
+          {{drug.drugInfo.drugName}}
+        </td>
+        <td *ngFor="let dosage of drug.dosage; let i = index" style="text-align:center">
+          <ng-container *ngIf="dosage !== 0">
+            {{dosage}}{{drug.drugInfo.unit}}
+          </ng-container>
+          <ng-container *ngIf="dosage == 0">
+            -
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- </div> -->

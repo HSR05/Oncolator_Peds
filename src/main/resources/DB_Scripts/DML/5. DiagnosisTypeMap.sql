@@ -1,0 +1,18 @@
+TRUNCATE TABLE DiagnosisTypeMap;
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',0,0);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',NULL,0);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',1,2);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',2,2);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',3,2);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',4,2);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',5,3);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',17,4);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',18,4);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',19,4);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',20,4);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',22,5);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',34,6);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',35,6);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',36,6);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',37,7);
+INSERT INTO DiagnosisTypeMap (diagnosis,regimen,phaseId,type) VALUES ('ALL','ICICLE',49,1);

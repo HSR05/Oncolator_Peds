@@ -1,0 +1,46 @@
+<h2>Please fill out the form below to proceed</h2>
+<h3>Patient ID: {{oncId}}</h3>
+
+<div class="mrgnbtm">
+    <form [formGroup]="diagnosisForm" id="diagnosisForm" (ngSubmit)="onDiagnosisSubmit()" [ngSwitch]="formType">
+        <div *ngSwitchCase="0">
+            <formly-form name="diagnosisForm0" [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields0"
+                [model]="DiagnosisFormObj.model0">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="1">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields1" [model]="DiagnosisFormObj.model1">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="2">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields2" [model]="DiagnosisFormObj.model2">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="4">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields2" [model]="DiagnosisFormObj.model2">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="6">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields2" [model]="DiagnosisFormObj.model2">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="3">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields3" [model]="DiagnosisFormObj.model3">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="5">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields3" [model]="DiagnosisFormObj.model3">
+            </formly-form>
+        </div>
+        <div *ngSwitchCase="7">
+            <formly-form [form]="diagnosisForm" [fields]="DiagnosisFormObj.fields3" [model]="DiagnosisFormObj.model3">
+            </formly-form>
+        </div>
+        <div *ngSwitchDefault>
+            Are you sure you want to continue?
+        </div>
+        <button style="margin-top: 10px;" class="btn btn-primary" (click)="goBack()">Back</button>
+        <button style="margin-top: 10px;" type="submit" form="diagnosisForm" class="btn btn-primary float-end"
+            [disabled]="!diagnosisForm.valid" disabled>Submit</button>
+    </form>
+</div>

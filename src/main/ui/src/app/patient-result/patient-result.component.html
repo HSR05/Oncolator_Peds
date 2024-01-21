@@ -1,0 +1,10 @@
+<h3>Patient ID: {{diagnosisData.patientInfo.oncId}}</h3>
+<h5>DOB: {{diagnosisData.patientInfo.DOB}}</h5>
+<h4>
+    <select [(ngModel)]="activePhase" name="Phase" class="form-select" (change)="onPhaseSelect($event.target.value)">
+        <option *ngFor="let option of availablePhaseList" [value]="option">{{option}}</option>
+    </select>
+</h4>
+<h4>Prescription</h4>
+<app-result-table></app-result-table>
+<button style="margin-top: 10px;" class="btn btn-primary" (click)="enterNextPhase()">Enter Next Phase</button>

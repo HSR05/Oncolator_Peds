@@ -1,0 +1,63 @@
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
+<div class="mrgnbtm form-wrapper">
+  <h2>Enter Patient details</h2>
+  <form [formGroup]="patientForm" id="patientForm" (ngSubmit)="onPatientSubmit()">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="InputDob">Date Of Birth</label>
+        <input type="date" class="form-control" formControlName="DOB" id="InputDob" placeholder="DOB">
+      </div>
+      <div class="form-group col-md-6">
+        <label class="d-block">Sex:</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sex" formControlName="sex" id="InputSexMale" value="M">
+          <label class="form-check-label" for="InputSexMale">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sex" formControlName="sex" id="InputSexFemale" value="F">
+          <label class="form-check-label" for="InputSexFemale">Female</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="InputHeight">Height (cm)</label>
+        <input type="number" class="form-control" formControlName="height" id="InputHeight" placeholder="Height">
+        <div *ngIf="patientForm.get('height').invalid && (patientForm.get('height').dirty || patientForm.get('height').touched)">
+          <small class="text-danger">Height must be a non-negative value.</small>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="InputWeight">Weight (kg)</label>
+        <input type="number" class="form-control" formControlName="weight" id="InputWeight" placeholder="Weight">
+        <div *ngIf="patientForm.get('weight').invalid && (patientForm.get('weight').dirty || patientForm.get('weight').touched)">
+          <small class="text-danger">Weight must be a non-negative value.</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label for="InputHistoryOfPriorTreatment">History of Prior Treatment (if any)</label>
+        <input type="text" class="form-control" formControlName="HistoryOfPriorTreatment"
+          id="InputHistoryOfPriorTreatment" placeholder="Enter your text here">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="InputDiagnosis">Diagnosis</label>
+        <select class="form-control" formControlName="diagnosis" name="Diagnosis">
+          <option value="ALL">ALL</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="InputRegimen">Regimen</label>
+        <select class="form-control" formControlName="regimen" name="Regimen">
+          <option value="ICICLE">ICICLE</option>
+        </select>
+      </div>
+    </div>
+    <button style="margin-top: 10px;" type="submit" form="patientForm" [disabled]="!patientForm.valid" class="btn btn-primary">Proceed</button>
+  </form>
+
+</div>

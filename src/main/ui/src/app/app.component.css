@@ -1,0 +1,21 @@
+.mrgnbtm {
+  margin-top: 20px;
+}
+
+.container {
+  width: 85%;
+  max-width: 85%;
+}
+
+.splitter {
+  text-align: center;
+}
+
+.form-check-label {
+  padding: 0 1em;
+  text-align: center;
+}
+
+.label-sex {
+  margin-bottom: 0.5em;
+}

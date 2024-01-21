@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Oncolator</a>
+      
+      <button class="navbar-toggler" type="button" (click)="basicNavbar.toggle()" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav" mdbCollapse #basicNavbar="mdbCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="/about-us">About Us</a>
+          </li>
+        </ul>
+        
+        <form [formGroup]="searchForm" (ngSubmit)="onPatientSearch()" class="d-flex">
+          <input type="number" class="form-control me-2" formControlName="oncId" id="InputOncId"
+            placeholder="Patient ID">
+          <input type="date" class="form-control me-2" formControlName="dob" id="InputDob" placeholder="DOB">
+          <button type="submit" [disabled]="!searchForm.valid" class="btn btn-light" disabled>Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  

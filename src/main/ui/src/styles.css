@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+body {
+    background-color: white;
+    /* background-image: url('https://img.freepik.com/free-vector/oncology-illustration-tiny-cancer-disease-research-persons-concept-abstract-symbolic-fight-against-illness-with-pharmacy-pills-medicine-radiology-diagnosis-sickness-therapy_126608-858.jpg?w=2000'); */
+    /* color: black; */
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Oncolator custom styles */
+body {
+    background-color: #fff;
+  }
+  
+  .form-control {
+    background-color: #f4f4f4;
+    border-color: #ddd;
+    color: #555;
+  }
+  
+  .form-check-input:checked + .form-check-label {
+    color: #007bff;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  
+  /* Responsive styles for iPhones and Android devices */
+  @media (max-width: 576px) {
+    .form-group label {
+      font-size: 14px;
+    }
+    
+    .form-control {
+      font-size: 14px;
+      padding: 10px;
+    }
+    
+    .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
